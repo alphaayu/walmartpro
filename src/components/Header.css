@@ -6,10 +6,19 @@
     background-color: #2e3b4e;
     color: white;
   }
+  .home{
+    text-align: left;
+  }
   
-  .logo {
+  
+  h1 {
     font-size: 1.5em;
     font-weight: bold;
+    color: white;
+  }
+  .logo{
+    color: white;
+
   }
   
   nav ul {

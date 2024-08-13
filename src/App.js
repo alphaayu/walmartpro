@@ -1,21 +1,35 @@
-// src/App.js
+// Import necessary modules and components
 import React from 'react';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import Dashboard from './components/Dashboard';
-import MapVisualization from './components/MapVisualization';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header.jsx'; // Include .jsx extension
+import Dashboard from './components/Dashboard.jsx'; // Include .jsx extension
+import Order from './components/Order.jsx'; // Include .jsx extension
+import LandingPage from './components/LandingPage.jsx'; // Include .jsx extension
+import InventoryPage from './components/InventoryPage.jsx'; // Include .jsx extension
+// import Signup from './components/Signup.js';
+// import Login from './components/Login.js';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <div className="main-content">
-        <Sidebar />
-        <Dashboard />
-        <MapVisualization />
-      </div>
-    </div>
+    <Router>
+      
+        <Header />
+    
+          <Routes>
+            <Route path="/" element={<LandingPage />} /> {/* Correctly importing and using LandingPage */}
+            <Route path="/dashboard" element={<Dashboard />} />
+            {/* Uncomment the following line if MapVisualization is used */}
+            {/* <Route path="/map" element={<MapVisualization />} /> */}
+            <Route path="/order" element={<Order />} />
+            <Route path="/inventory" element={<InventoryPage />} />
+            {/* <Route path="/login" element={<Login />} /> */}
+             {/* <Route path="/signup" element={<Signup />} /> */}
+            {/* Add more routes as needed */}
+          </Routes>
+  
+      
+    </Router>
   );
 }
 
