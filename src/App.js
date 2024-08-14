@@ -6,9 +6,12 @@ import Dashboard from './components/Dashboard.jsx'; // Include .jsx extension
 import Order from './components/Order.jsx'; // Include .jsx extension
 import LandingPage from './components/LandingPage.jsx'; // Include .jsx extension
 import InventoryPage from './components/InventoryPage.jsx'; // Include .jsx extension
+import Tracking from './components/Tracking.jsx';
+// import Tracking from './components/Tracking.jsx';
 // import Signup from './components/Signup.js';
 // import Login from './components/Login.js';
 import './App.css';
+
 
 function App() {
   return (
@@ -23,6 +26,8 @@ function App() {
             {/* <Route path="/map" element={<MapVisualization />} /> */}
             <Route path="/order" element={<Order />} />
             <Route path="/inventory" element={<InventoryPage />} />
+            <Route path="/tracking" element={<Tracking />}/>
+            
             {/* <Route path="/login" element={<Login />} /> */}
              {/* <Route path="/signup" element={<Signup />} /> */}
             {/* Add more routes as needed */}

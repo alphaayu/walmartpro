@@ -14,8 +14,9 @@ mongoose.connect('mongodb://localhost:27017/inventory').then(() => {
 });
 
 // CORS configuration
+
 app.use(cors({
-    origin: 'http://localhost:5000' // Allow requests from your frontend
+  origin: ['http://localhost:3001', 'http://localhost:5000'], // Allow multiple origins
 }));
 
 // Middleware to parse JSON bodies
