@@ -66,7 +66,7 @@ function ReportsPage() {
                 width: '100%'
             }}>
                 <h1 style={{ 
-                    color: '#AB84FF', 
+                    color: '#fff', 
                     fontSize: '28px', 
                     marginBottom: '20px'
                 }}>
@@ -112,7 +112,7 @@ function ReportsPage() {
                 <button
                     onClick={downloadPDF}
                     style={{ 
-                        backgroundColor: '#AB84FF', 
+                        backgroundColor: 'green', 
                         color: 'white', 
                         padding: '12px 30px', 
                         border: 'none', 
@@ -129,7 +129,7 @@ function ReportsPage() {
                         e.target.style.transform = 'scale(1.05)';
                     }}
                     onMouseLeave={(e) => {
-                        e.target.style.backgroundColor = '#AB84FF';
+                        e.target.style.backgroundColor = 'green';
                         e.target.style.transform = 'scale(1)';
                     }}
                 >

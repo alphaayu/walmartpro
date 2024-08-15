@@ -24,31 +24,46 @@ const ProductTable = () => {
   const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
-    <Box p={5} className="product-table-container">
+    <Box 
+      p={5} 
+      className="product-table-container"
+      bg="#e0f2f1"  // Light green background
+      color="#388e3c" // Dark green text color
+    >
       <Flex mb={4} justify="flex-end">
         <Input
           placeholder="Search..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           width="250px"
+          bg="#a5d6a7" // Light green input background
+          color="#ffffff" // White text color
+          borderColor="#388e3c" // Green border
         />
       </Flex>
-      <Table variant="simple" sx={{ tableLayout: "fixed" }}>
+      <Table 
+        variant="simple" 
+        sx={{ tableLayout: "fixed" }}
+        bg="white" // White background for the table
+      >
         <Thead>
-          <Tr>
-            <Th>Product Name</Th>
-            <Th>Category</Th>
-            <Th>SKU</Th>
-            <Th>Date</Th>
-            <Th>Quantity</Th>
-            <Th>Promise Date</Th>
-            <Th>Customers</Th>
-            <Th>Status</Th>
+          <Tr bg="#388e3c"> {/* Dark green header background */}
+            <Th color="white">Product Name</Th>
+            <Th color="white">Category</Th>
+            <Th color="white">SKU</Th>
+            <Th color="white">Date</Th>
+            <Th color="white">Quantity</Th>
+            <Th color="white">Promise Date</Th>
+            <Th color="white">Customers</Th>
+            <Th color="white">Status</Th>
           </Tr>
         </Thead>
         <Tbody>
           {currentItems.map((item) => (
-            <Tr key={item.id}>
+            <Tr 
+              key={item.id} 
+              _hover={{ bg: "#a5d6a7" }} // Light green hover effect
+            >
               <Td>{item.name}</Td>
               <Td>{item.category}</Td>
               <Td>{item.sku}</Td>
@@ -65,6 +80,16 @@ const ProductTable = () => {
         currentPage={currentPage}
         totalPages={Math.ceil(data.length / itemsPerPage)}
         onPageChange={paginate}
+        sx={{
+          '.page-item .page-link': {
+            backgroundColor: '#388e3c', // Green background for pagination buttons
+            color: '#ffffff', // White text
+          },
+          '.page-item.active .page-link': {
+            backgroundColor: '#1b5e20', // Darker green for active page
+            color: '#ffffff', // White text
+          },
+        }}
       />
     </Box>
   );
