@@ -14,6 +14,9 @@ This project is a responsive Supply Chain Dashboard web application built using 
 - **CSS**: Styling and animations.
 - **HTML**: Markup for structuring components.
 - **JavaScript**: Programming logic for React components.
+- **Node.js**:For backend Development.
+- **MongoDB**:For storing user data.
+- **Express.js**:For backend development.
 
 ## Installation
 
